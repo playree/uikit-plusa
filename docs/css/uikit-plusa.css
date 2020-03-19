@@ -41,39 +41,71 @@
     margin-bottom: 0;
 }
 .ukp-border-danger,
-.ukp-border-danger .ukp-boxlist-item {
-    border-color: #f0506e;
+.ukp-border-danger .ukp-boxlist-item,
+.ukp-border-danger th,
+.ukp-border-danger td {
+    border-color: #f0506e !important;
 }
 .ukp-border-primary,
-.ukp-border-primary .ukp-boxlist-item {
-    border-color: #1e87f0;
+.ukp-border-primary .ukp-boxlist-item,
+.ukp-border-primary th,
+.ukp-border-primary td {
+    border-color: #1e87f0 !important;
 }
-.ukp-bordertable {
+.ukp-table-border {
     border-spacing: 0;
     border: 1px solid #ddd;
 }
-.ukp-bordertable th,
-.ukp-bordertable td {
+.ukp-table-border th,
+.ukp-table-border td {
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     padding: 0.5rem 1rem;
 }
-.ukp-bordertable tr:last-child>td {
+.ukp-table-border tr:last-child>td {
     border-bottom: none;
 }
-.ukp-bordertable th:last-child,
-.ukp-bordertable td:last-child {
+.ukp-table-border th:last-child,
+.ukp-table-border td:last-child {
     border-right: none;
 }
-.ukp-paragraph::before {
+.ukp-paragraph::before,
+.ukp-paragraph\@s::before,
+.ukp-paragraph\@m::before,
+.ukp-paragraph\@l::before,
+.ukp-paragraph\@xl::before {
     content: "#";
     position: absolute;
-    width: 1.1em;
-    margin-left: -1.1em;
+    width: 1em;
+    margin-left: -1em;
     color: #666;
 }
-.ukp-paragraph[data-symbol]::before {
+.ukp-paragraph[data-symbol]::before,
+.ukp-paragraph\@s[data-symbol]::before,
+.ukp-paragraph\@m[data-symbol]::before,
+.ukp-paragraph\@l[data-symbol]::before,
+.ukp-paragraph\@xl[data-symbol]::before {
     content: attr(data-symbol);
+}
+@media (max-width: 639px) {
+    .ukp-paragraph\@s::before {
+        display: none !important;
+    }
+}
+@media (max-width: 959px) {
+    .ukp-paragraph\@m::before {
+        display: none !important;
+    }
+}
+@media (max-width: 1199px) {
+    .ukp-paragraph\@l::before {
+        display: none !important;
+    }
+}
+@media (max-width: 1599px) {
+    .ukp-paragraph\@xl::before {
+        display: none !important;
+    }
 }
 .ukp-sidenav {
     position: fixed;

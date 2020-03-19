@@ -25,14 +25,15 @@
 
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
 			<h1>UIkit Plus α</h1>
-			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことでCOMPONENTSを少し追加できます。<br>
+			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
 			※UIkit 3.3.0で動作確認を行っています。
 		</div>
 
 		<div class="uk-container uk-container-small uk-margin-top">
 
-			<h2 id="paragraph" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Paragraph<p>段落表示</p></span></h2>
+			<h2 id="paragraph" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Paragraph<p>段落表示</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
 			<p>
 				<code>h1～h6</code>の先頭にシンボルを表示します。
 			</p>
@@ -51,11 +52,48 @@ abc123
 xyz456
 &lt;h3 class=&quot;ukp-paragraph&quot; data-symbol=&quot;@&quot;&gt;Paragraph3&lt;/h3&gt;</code></pre>
 
+			<p>
+				表示幅による表示制御表記(<code>@s,@m,@l,@xl</code>)も可能です。
+			</p>
+			<table class="uk-table uk-table-divider">
+				<thead>
+					<tr>
+						<th>Class</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>ukp-paragraph@s</code></td>
+						<td><span class="uk-text-danger">640px</span> 以上の場合のみ表示</td>
+					</tr>
+					<tr>
+						<td><code>ukp-paragraph@m</code></td>
+						<td><span class="uk-text-danger">960px</span> 以上の場合のみ表示</td>
+					</tr>
+					<tr>
+						<td><code>ukp-paragraph@l</code></td>
+						<td><span class="uk-text-danger">1200px</span> 以上の場合のみ表示</td>
+					</tr>
+					<tr>
+						<td><code>ukp-paragraph@xl</code></td>
+						<td><span class="uk-text-danger">1600px</span> 以上の場合のみ表示</td>
+					</tr>
+				</tbody>
+			</table>
+
 			<h2 id="sub_text" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Sub Text<p>サブテキスト</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				<code>h1～h6</code>にサブテキストを表示します。
+			</p>
 			<div class="uk-margin-left">
 				<h3 class="ukp-paragraph"><span class="ukp-attsubtext">Main Text<p>Sub text</p></span></h3>
+				デフォルト(左寄せ)の表示。
 				<h3 class="ukp-paragraph"><span class="ukp-attsubtext-end">ABCDefgh<p>End text</p></span></h3>
+				右寄せの表示。
 				<h3 class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext-end">ABCDefgh<p>End text</p></span></h3>
+				UIkitの<code>uk-heading-line</code>などと組み合わせることもできます。
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
 <code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext&quot;&gt;Main Text&lt;p&gt;Sub text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
@@ -63,6 +101,11 @@ xyz456
 &lt;h3 class=&quot;ukp-paragraph uk-heading-line&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;</code></pre>
 
 			<h2 id="box_list" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Box List<p>ボックスタイプのリスト</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				枠線で囲うタイプのリスト表示です。<br>
+				リンクとして設定することもできます。
+			</p>
 			<div class="uk-width-large ukp-boxlist uk-margin-top">
 				<div class="ukp-boxlist-item">abc123</div>
 				<div class="ukp-boxlist-item">xyz456</div>
@@ -85,6 +128,13 @@ xyz456
 	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 
+			<p>
+				枠線の色も変更可能です。
+				<ul>
+					<li><code>ukp-border-primary</code> : Blue</li>
+					<li><code>ukp-border-danger</code> : Red</li>
+				</ul>
+			</p>
 			<div class="uk-width-large ukp-boxlist ukp-border-primary uk-margin-top">
 				<div class="ukp-boxlist-item">abc123</div>
 				<div class="ukp-boxlist-item">xyz456</div>
@@ -104,23 +154,75 @@ xyz456
 &lt;/div&gt;</code></pre>
 
 			<h2 id="border_table" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Border Table<p>枠線タイプのテーブル</p></span></h2>
-			<table class="uk-width-large ukp-bordertable uk-margin-top">
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				シンプルな枠線タイプのテーブルです。
+			</p>
+			<table class="uk-table ukp-table-border uk-margin-top">
 				<tr>
-					<th>TH1</th>
-					<th>TH2</th>
-					<th>TH3</th>
+					<th>TH1</th><th>TH2</th><th>TH3</th>
 				</tr>
 				<tr>
-					<td>123</td>
-					<td>456</td>
-					<td>789</td>
+					<td>abc</td><td>def</td><td>ghi</td>
 				</tr>
 				<tr>
-					<td>あいうえお</td>
-					<td>かきくけこ</td>
-					<td>さしすせそ</td>
+					<td>123</td><td>456</td><td>789</td>
 				</tr>
 			</table>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;table class=&quot;uk-table ukp-table-border uk-margin-top&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;abc&lt;/td&gt;&lt;td&gt;def&lt;/td&gt;&lt;td&gt;ghi&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;123&lt;/td&gt;&lt;td&gt;456&lt;/td&gt;&lt;td&gt;789&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+			<p>
+				枠線の色も変更可能です。
+				<ul>
+					<li><code>ukp-border-primary</code> : Blue</li>
+					<li><code>ukp-border-danger</code> : Red</li>
+				</ul>
+			</p>
+			<table class="uk-table ukp-table-border ukp-border-primary uk-margin-top">
+				<tr>
+					<th>TH1</th><th>TH2</th><th>TH3</th>
+				</tr>
+				<tr>
+					<td>abc</td><td>def</td><td>ghi</td>
+				</tr>
+			</table>
+			<table class="uk-table ukp-table-border ukp-border-danger uk-margin-top">
+				<tr>
+					<th>TH1</th><th>TH2</th><th>TH3</th>
+				</tr>
+				<tr>
+					<td>abc</td><td>def</td><td>ghi</td>
+				</tr>
+			</table>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;table class=&quot;uk-table ukp-table-border ukp-border-primary uk-margin-top&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;abc&lt;/td&gt;&lt;td&gt;def&lt;/td&gt;&lt;td&gt;ghi&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;table class=&quot;uk-table ukp-table-border ukp-border-danger uk-margin-top&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;abc&lt;/td&gt;&lt;td&gt;def&lt;/td&gt;&lt;td&gt;ghi&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+			
 		</div>
 
 		<br><br><br>
