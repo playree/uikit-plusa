@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- uikit -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
+
+		<link rel="stylesheet" href="./css/uikit-plusa.css">
+	</head>
+	<body>
+
+		<div class="ukp-sidenav uk-visible@l">
+			<ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
+				<li><a href="#paragraph">Paragraph</a></li>
+				<li><a href="#sub_text">Sub Text</a></li>
+				<li><a href="#box_list">Box List</a></li>
+				<li><a href="#border_table">Border Table</a></li>
+			</ul>
+		</div>
+
+		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
+			<h1>UIkit Plus α</h1>
+			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことでCOMPONENTSを少し追加できます。<br>
+			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
+			※UIkit 3.3.0で動作確認を行っています。
+		</div>
+
+		<div class="uk-container uk-container-small uk-margin-top">
+
+			<h2 id="paragraph" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Paragraph<p>段落表示</p></span></h2>
+			<p>
+				<code>h1～h6</code>の先頭にシンボルを表示します。
+			</p>
+			<div class="uk-margin-left">
+				<h3 class="ukp-paragraph">Paragraph1</h3>
+				abc123
+				<h3 class="ukp-paragraph">Paragraph2</h3>
+				xyz456
+				<h3 class="ukp-paragraph" data-symbol="@">Paragraph3</h3>
+				シンボルは<code>data-symbol</code>属性を指定することで変更することができます。(デフォルトは<code>#</code>です。)
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;Paragraph1&lt;/h3&gt;
+abc123
+&lt;h3 class=&quot;ukp-paragraph&quot;&gt;Paragraph2&lt;/h3&gt;
+xyz456
+&lt;h3 class=&quot;ukp-paragraph&quot; data-symbol=&quot;@&quot;&gt;Paragraph3&lt;/h3&gt;</code></pre>
+
+			<h2 id="sub_text" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Sub Text<p>サブテキスト</p></span></h2>
+			<div class="uk-margin-left">
+				<h3 class="ukp-paragraph"><span class="ukp-attsubtext">Main Text<p>Sub text</p></span></h3>
+				<h3 class="ukp-paragraph"><span class="ukp-attsubtext-end">ABCDefgh<p>End text</p></span></h3>
+				<h3 class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext-end">ABCDefgh<p>End text</p></span></h3>
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext&quot;&gt;Main Text&lt;p&gt;Sub text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class=&quot;ukp-paragraph uk-heading-line&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;</code></pre>
+
+			<h2 id="box_list" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Box List<p>ボックスタイプのリスト</p></span></h2>
+			<div class="uk-width-large ukp-boxlist uk-margin-top">
+				<div class="ukp-boxlist-item">abc123</div>
+				<div class="ukp-boxlist-item">xyz456</div>
+				<div class="ukp-boxlist-item"><h3>Header</h3>substring789</div>
+			</div>
+			<div class="uk-width-large ukp-boxlist uk-margin-top">
+				<a class="ukp-boxlist-item" href="#box_list">abc123</a>
+				<a class="ukp-boxlist-item" href="#box_list">xyz456</a>
+				<a class="ukp-boxlist-item" href="#box_list"><h3>Header</h3>substring789</a>
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div class=&quot;uk-width-large ukp-boxlist uk-margin-top&quot;&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;abc123&lt;/div&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;xyz456&lt;/div&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;uk-width-large ukp-boxlist uk-margin-top&quot;&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;abc123&lt;/a&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;xyz456&lt;/a&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+			<div class="uk-width-large ukp-boxlist ukp-border-primary uk-margin-top">
+				<div class="ukp-boxlist-item">abc123</div>
+				<div class="ukp-boxlist-item">xyz456</div>
+			</div>
+			<div class="uk-width-large ukp-boxlist ukp-border-danger uk-margin-top">
+				<a class="ukp-boxlist-item" href="#box_list">abc123</a>
+				<a class="ukp-boxlist-item" href="#box_list">xyz456</a>
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div class=&quot;uk-width-large ukp-boxlist ukp-border-primary uk-margin-top&quot;&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;abc123&lt;/div&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;xyz456&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;uk-width-large ukp-boxlist ukp-border-danger uk-margin-top&quot;&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;abc123&lt;/a&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;xyz456&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+			<h2 id="border_table" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Border Table<p>枠線タイプのテーブル</p></span></h2>
+			<table class="uk-width-large ukp-bordertable uk-margin-top">
+				<tr>
+					<th>TH1</th>
+					<th>TH2</th>
+					<th>TH3</th>
+				</tr>
+				<tr>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+				</tr>
+				<tr>
+					<td>あいうえお</td>
+					<td>かきくけこ</td>
+					<td>さしすせそ</td>
+				</tr>
+			</table>
+		</div>
+
+		<br><br><br>
+	</body>
+</html>

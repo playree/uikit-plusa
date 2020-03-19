@@ -1,0 +1,113 @@
+.ukp-attsubtext,
+.ukp-attsubtext-end {
+    display: inline-block;
+}
+.ukp-attsubtext>p,
+.ukp-attsubtext-end>p {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+.ukp-attsubtext-end>p {
+    text-align: end;
+}
+.ukp-attsubtext>p::before {
+    content: "\0bb\00a0";
+}
+.ukp-subtext-end {
+    font-size: 0.875rem;
+    color: #666;
+    padding-top: 2px;
+    text-align: end;
+}
+.ukp-boxlist {
+    border: 1px solid #ddd;
+}
+.ukp-boxlist .ukp-boxlist-item {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #666;
+}
+.ukp-boxlist .ukp-boxlist-item:last-child {
+    border-bottom: none;
+}
+.ukp-boxlist a.ukp-boxlist-item:hover {
+    background-color: #eef;
+}
+.ukp-boxlist .ukp-boxlist-item>h3 {
+    margin-bottom: 0;
+}
+.ukp-border-danger,
+.ukp-border-danger .ukp-boxlist-item {
+    border-color: #f0506e;
+}
+.ukp-border-primary,
+.ukp-border-primary .ukp-boxlist-item {
+    border-color: #1e87f0;
+}
+.ukp-bordertable {
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+.ukp-bordertable th,
+.ukp-bordertable td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+.ukp-bordertable tr:last-child>td {
+    border-bottom: none;
+}
+.ukp-bordertable th:last-child,
+.ukp-bordertable td:last-child {
+    border-right: none;
+}
+.ukp-paragraph::before {
+    content: "#";
+    position: absolute;
+    width: 1.1em;
+    margin-left: -1.1em;
+    color: #666;
+}
+.ukp-paragraph[data-symbol]::before {
+    content: attr(data-symbol);
+}
+.ukp-sidenav {
+    position: fixed;
+    z-index: 10;
+    top: 2rem;
+    right: 0;
+    width: 200px;
+    margin-right: 2rem;
+}
+.ukp-sidenav li.uk-active::before {
+    content: "\0bb";
+    position: absolute;
+    width: 1.2em;
+    margin-left: -1.2em;
+    padding-top: 5px;
+}
+.ukp-sidenav ul {
+    margin-left: 2rem;
+}
+.ukp-pre-title>span,
+.ukp-pre-title-dark>span {
+    position: relative;
+    top: -10px;
+    left: -10px;
+    padding: 2px 8px;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #888;
+    color: #fff;
+}
+.ukp-pre-title-dark {
+    color: #fff;
+    background-color: #244;
+}
+.ukp-pre-title>code {
+    display: block;
+}
