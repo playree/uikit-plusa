@@ -1,6 +1,4 @@
-/*
- * MIT License
- */
+/*! UIkit Plus α 1.0.0 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
 
 .ukp-attsubtext,
 .ukp-attsubtext-end {
@@ -111,7 +109,7 @@
         display: none !important;
     }
 }
-.ukp-sidenav {
+.ukp-sidefixnav {
     position: fixed;
     z-index: 10;
     top: 2rem;
@@ -119,14 +117,14 @@
     width: 200px;
     margin-right: 2rem;
 }
-.ukp-sidenav li.uk-active::before {
+.ukp-sidefixnav li.uk-active::before {
     content: "\0bb";
     position: absolute;
     width: 1.2em;
     margin-left: -1.2em;
     padding-top: 5px;
 }
-.ukp-sidenav ul {
+.ukp-sidefixnav ul {
     margin-left: 2rem;
 }
 .ukp-pre-title>span,

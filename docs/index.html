@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Extension for UIkit3">
 		<meta name="keywords" content="uikit,uikit3,css">
+		<meta name="author" content="Kazuki Minakawa (funlab, Inc.)">
 		<title>UIkit Plus α</title>
+		<link rel="shortcut icon" href="./favicon.ico">
 
 		<!-- OGP -->
 		<meta property="og:site_name" content="UIkit Plus α">
@@ -26,19 +28,23 @@
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
 
-		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020031912">
+		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032000">
 	</head>
 	<body>
 
-		<div class="ukp-sidenav uk-visible@l">
+		<div class="ukp-sidefixnav uk-visible@l">
 			<ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
 				<li><a href="#paragraph">Paragraph</a></li>
 				<li><a href="#sub_text">Sub Text</a></li>
 				<li><a href="#box_list">Box List</a></li>
 				<li><a href="#border_table">Border Table</a></li>
+				<li><a href="#titled_pre">Titled Preformatted Text</a></li>
+				<li><a href="#side_fix_nav">Side Fix Nav</a></li>
 				<li class="uk-nav-divider"></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
 				<li><a href="https://getuikit.com/" target="_blank"><span uk-icon="icon: uikit"></span> UIkit3</a></li>
+				<li class="uk-nav-divider"></li>
+				<li><a href="https://funlab.jp/" target="_blank"><span uk-icon="icon: home"></span> funlab, Inc.</a></li>
 			</ul>
 		</div>
 
@@ -65,11 +71,11 @@
 				シンボルは<code>data-symbol</code>属性を指定することで変更することができます。(デフォルトは<code>#</code>です。)
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;Paragraph1&lt;/h3&gt;
+<code>&lt;h3 class="ukp-paragraph"&gt;Paragraph1&lt;/h3&gt;
 abc123
-&lt;h3 class=&quot;ukp-paragraph&quot;&gt;Paragraph2&lt;/h3&gt;
+&lt;h3 class="ukp-paragraph"&gt;Paragraph2&lt;/h3&gt;
 xyz456
-&lt;h3 class=&quot;ukp-paragraph&quot; data-symbol=&quot;@&quot;&gt;Paragraph3&lt;/h3&gt;</code></pre>
+&lt;h3 class="ukp-paragraph" data-symbol="@"&gt;Paragraph3&lt;/h3&gt;</code></pre>
 
 			<p>
 				表示幅による表示制御表記(<code>@s,@m,@l,@xl</code>)も可能です。
@@ -101,7 +107,7 @@ xyz456
 				</tbody>
 			</table>
 
-			<h2 id="sub_text" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Sub Text<p>サブテキスト</p></span></h2>
+			<h2 id="sub_text" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Sub Text<p>サブテキスト</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				<code>h1～h6</code>にサブテキストを表示します。
@@ -115,11 +121,11 @@ xyz456
 				UIkitの<code>uk-heading-line</code>などと組み合わせることもできます。
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext&quot;&gt;Main Text&lt;p&gt;Sub text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;h3 class=&quot;ukp-paragraph uk-heading-line&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;</code></pre>
+<code>&lt;h3 class="ukp-paragraph"&gt;&lt;span class="ukp-attsubtext"&gt;Main Text&lt;p&gt;Sub text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class="ukp-paragraph"&gt;&lt;span class="ukp-attsubtext-end"&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class="ukp-paragraph uk-heading-line"&gt;&lt;span class="ukp-attsubtext-end"&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;</code></pre>
 
-			<h2 id="box_list" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Box List<p>ボックスタイプのリスト</p></span></h2>
+			<h2 id="box_list" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Box List<p>ボックスタイプのリスト</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				枠線で囲うタイプのリスト表示です。<br>
@@ -136,15 +142,15 @@ xyz456
 				<a class="ukp-boxlist-item" href="#box_list"><h3>Header</h3>substring789</a>
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;div class=&quot;uk-width-large ukp-boxlist uk-margin-top&quot;&gt;
-	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;abc123&lt;/div&gt;
-	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;xyz456&lt;/div&gt;
-	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/div&gt;
+<code>&lt;div class="uk-width-large ukp-boxlist uk-margin-top"&gt;
+	&lt;div class="ukp-boxlist-item"&gt;abc123&lt;/div&gt;
+	&lt;div class="ukp-boxlist-item"&gt;xyz456&lt;/div&gt;
+	&lt;div class="ukp-boxlist-item"&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;uk-width-large ukp-boxlist uk-margin-top&quot;&gt;
-	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;abc123&lt;/a&gt;
-	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;xyz456&lt;/a&gt;
-	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/a&gt;
+&lt;div class="uk-width-large ukp-boxlist uk-margin-top"&gt;
+	&lt;a class="ukp-boxlist-item" href=""&gt;abc123&lt;/a&gt;
+	&lt;a class="ukp-boxlist-item" href=""&gt;xyz456&lt;/a&gt;
+	&lt;a class="ukp-boxlist-item" href=""&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 
 			<p>
@@ -163,16 +169,16 @@ xyz456
 				<a class="ukp-boxlist-item" href="#box_list">xyz456</a>
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;div class=&quot;uk-width-large ukp-boxlist ukp-border-primary uk-margin-top&quot;&gt;
-	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;abc123&lt;/div&gt;
-	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;xyz456&lt;/div&gt;
+<code>&lt;div class="uk-width-large ukp-boxlist ukp-border-primary uk-margin-top"&gt;
+	&lt;div class="ukp-boxlist-item"&gt;abc123&lt;/div&gt;
+	&lt;div class="ukp-boxlist-item"&gt;xyz456&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;uk-width-large ukp-boxlist ukp-border-danger uk-margin-top&quot;&gt;
-	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;abc123&lt;/a&gt;
-	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;xyz456&lt;/a&gt;
+&lt;div class="uk-width-large ukp-boxlist ukp-border-danger uk-margin-top"&gt;
+	&lt;a class="ukp-boxlist-item" href=""&gt;abc123&lt;/a&gt;
+	&lt;a class="ukp-boxlist-item" href=""&gt;xyz456&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 
-			<h2 id="border_table" class="ukp-paragraph uk-heading-line"><span class="ukp-attsubtext">Border Table<p>枠線タイプのテーブル</p></span></h2>
+			<h2 id="border_table" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Border Table<p>枠線タイプのテーブル</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				シンプルな枠線タイプのテーブルです。
@@ -189,7 +195,7 @@ xyz456
 				</tr>
 			</table>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;table class=&quot;uk-table ukp-table-border uk-margin-top&quot;&gt;
+<code>&lt;table class="uk-table ukp-table-border uk-margin-top"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
 	&lt;/tr&gt;
@@ -225,7 +231,7 @@ xyz456
 				</tr>
 			</table>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;table class=&quot;uk-table ukp-table-border ukp-border-primary uk-margin-top&quot;&gt;
+<code>&lt;table class="uk-table ukp-table-border ukp-border-primary uk-margin-top"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
 	&lt;/tr&gt;
@@ -233,7 +239,7 @@ xyz456
 		&lt;td&gt;abc&lt;/td&gt;&lt;td&gt;def&lt;/td&gt;&lt;td&gt;ghi&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
-&lt;table class=&quot;uk-table ukp-table-border ukp-border-danger uk-margin-top&quot;&gt;
+&lt;table class="uk-table ukp-table-border ukp-border-danger uk-margin-top"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
 	&lt;/tr&gt;
@@ -241,9 +247,59 @@ xyz456
 		&lt;td&gt;abc&lt;/td&gt;&lt;td&gt;def&lt;/td&gt;&lt;td&gt;ghi&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-			
+
+			<h2 id="titled_pre" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Titled Preformatted Text<p>タイトル付き整形済みテキスト</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				ソースの表示などに適した整形済みテキストです。<br>
+				左上にタイトルを付けることができます。
+			</p>
+			<pre class="ukp-pre-title"><span>CSS</span>
+<code>&lt;pre class="ukp-pre-title"&gt;&lt;span&gt;CSS&lt;/span&gt;
+&lt;code&gt;Titled Preformatted text&lt;/code&gt;&lt;/pre&gt;</code></pre>
+			<p>
+				下記ダークモードとの２種類を用意しています。
+			</p>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;pre class="ukp-pre-title-dark"&gt;&lt;span&gt;CSS&lt;/span&gt;
+&lt;code&gt;Titled Preformatted Text&lt;/code&gt;&lt;/pre&gt;</code></pre>
+			<p>
+				<code>&lt;pre&gt;</code> 直下の <code>&lt;span&gt;</code> の中身がタイトルになります。
+			</p>
+			<pre class="ukp-pre-title-dark"><span>Title</span>
+<code>&lt;pre class="ukp-pre-title-dark"&gt;&lt;span&gt;Title&lt;/span&gt;
+&lt;code&gt;Titled Preformatted Text&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+			<h2 id="side_fix_nav" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Side Fix Nav<p>右上固定のナビゲーション</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				右上に固定表示するナビゲーションです。<br>
+				本ページをPCなどで表示した際に右上に表示されているメニュー表示です。
+			</p>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div class="ukp-sidefixnav uk-visible@l"&gt;
+	&lt;ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true"&gt;
+		&lt;li&gt;&lt;a href="#paragraph"&gt;Paragraph&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#sub_text"&gt;Sub Text&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#box_list"&gt;Box List&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#border_table"&gt;Border Table&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#titled_pre"&gt;Titled Preformatted Text&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#side_fix_nav"&gt;Side Fix Nav&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="uk-nav-divider"&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: github"&gt;&lt;/span&gt; Source&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: uikit"&gt;&lt;/span&gt; UIkit3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="uk-nav-divider"&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: home"&gt;&lt;/span&gt; funlab, Inc.&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
 		</div>
 
-		<br><br><br>
+		<br><br><br><br><br><br>
+		<div>
+			<div class="uk-background-muted" style="display: flex; align-items: center; height: 4rem;" uk-sticky="bottom: true">
+				<div style="margin-left: 2rem; font-size: 0.8rem;">©️2020 <a href="https://funlab.jp/" target="_blank">funlab, Inc.</a></div>
+			</div>
+		</div>
 	</body>
 </html>
