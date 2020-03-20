@@ -40,6 +40,7 @@
 				<li><a href="#border_table">Border Table</a></li>
 				<li><a href="#titled_pre">Titled Preformatted Text</a></li>
 				<li><a href="#side_fix_nav">Side Fix Nav</a></li>
+				<li><a href="#floating_button">Floating Button</a></li>
 				<li class="uk-nav-divider"></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
 				<li><a href="https://getuikit.com/" target="_blank"><span uk-icon="icon: uikit"></span> UIkit3</a></li>
@@ -274,7 +275,9 @@ xyz456
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				右上に固定表示するナビゲーションです。<br>
-				本ページをPCなどで表示した際に右上に表示されているメニュー表示です。
+				基本的には本家UIkitの<code>Scrollspy nav</code>の動作になります。<br>
+				右上固定表示となることと、アクティブメニューの表示が少し変わります。<br>
+				サンプルとして、本ページをPCなどで表示した際に右上に表示されているメニューをご覧ください。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
 <code>&lt;div class="ukp-sidefixnav uk-visible@l"&gt;
@@ -292,6 +295,30 @@ xyz456
 		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: home"&gt;&lt;/span&gt; funlab, Inc.&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;</code></pre>
+
+			<h2 id="floating_button"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Floating Button<p>フローティングボタン</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				フローティングの丸ボタンです。
+			</p>
+			<a class="uk-button uk-button-primary ukp-button-floating" href="#floating_button" uk-icon="menu"></a>
+			<a class="uk-button uk-button-danger ukp-button-floating" href="#floating_button">+</a>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;a class="uk-button uk-button-primary ukp-button-floating" href="" uk-icon="menu"&gt;&lt;/a&gt;
+&lt;a class="uk-button uk-button-danger ukp-button-floating" href=""&gt;+&lt;/a&gt;</code></pre>
+			<p>
+				SmallサイズとLargeサイズ。
+			</p>
+			<a class="uk-button uk-button-primary ukp-button-floating uk-button-small" href="#floating_button" uk-icon="menu"></a>
+			<a class="uk-button uk-button-danger ukp-button-floating uk-button-small" href="#floating_button">+</a>
+			<p></p>
+			<a class="uk-button uk-button-primary ukp-button-floating uk-button-large" href="#floating_button" uk-icon="menu"></a>
+			<a class="uk-button uk-button-danger ukp-button-floating uk-button-large" href="#floating_button">+</a>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-small" href="" uk-icon="menu"&gt;&lt;/a&gt;
+&lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-small" href=""&gt;+&lt;/a&gt;
+&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-large" href="" uk-icon="menu"&gt;&lt;/a&gt;
+&lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-large" href=""&gt;+&lt;/a&gt;</code></pre>
 
 		</div>
 
