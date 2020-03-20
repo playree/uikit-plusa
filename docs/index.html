@@ -50,7 +50,7 @@
 		</div>
 
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
-			<h1>UIkit Plus α</h1>
+			<h1 id="top">UIkit Plus α</h1>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
 			※UIkit 3.3.0で動作確認を行っています。
@@ -319,6 +319,18 @@ xyz456
 &lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-small" href=""&gt;+&lt;/a&gt;
 &lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-large" href="" uk-icon="menu"&gt;&lt;/a&gt;
 &lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-large" href=""&gt;+&lt;/a&gt;</code></pre>
+
+			<a class="uk-button uk-button-primary ukp-button-floating uk-button-small
+			uk-position-bottom-right uk-position-fixed uk-margin-small-right uk-margin-small-bottom" 
+			href="#top" uk-icon="arrow-up" uk-scroll></a>
+			<p>
+				例えば、ページトップへスクロールするフローティングボタンの場合。<br>
+				サンプルとして、本ページ右下にあるフローティングボタンをご覧ください。
+			</p>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-small
+	uk-position-bottom-right uk-position-fixed uk-margin-small-right uk-margin-small-bottom" 
+	href="#top" uk-icon="arrow-up" uk-scroll&gt;&lt;/a&gt;</code></pre>
 
 		</div>
 
