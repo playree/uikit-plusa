@@ -28,11 +28,18 @@
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
 
-		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032000">
+		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032122">
+
+		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
+		<style>
+			html,h2,h3,h4,h5,h6 {
+    		font-family: "Kosugi Maru";
+			}
+		</style>
 	</head>
 	<body>
 
-		<div class="ukp-sidefixnav uk-visible@l">
+		<div class="ukp-sidefixnav uk-visible@l" ukp-for-small>
 			<ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
 				<li><a href="#paragraph">Paragraph</a></li>
 				<li><a href="#sub_text">Sub Text</a></li>
@@ -55,7 +62,7 @@
 			<p>最新バージョン <span class="uk-label">v1.0.0</span></p>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
-			※UIkit 3.3.0で動作確認を行っています。
+			<span class="uk-text-italic">※UIkit 3.3.0で動作確認を行っています。</span>
 		</div>
 
 		<div class="uk-container uk-container-small uk-margin-top">
@@ -70,15 +77,15 @@
 				abc123
 				<h3 class="ukp-paragraph">Paragraph2</h3>
 				xyz456
-				<h3 class="ukp-paragraph" data-symbol="@">Paragraph3</h3>
-				シンボルは<code>data-symbol</code>属性を指定することで変更することができます。(デフォルトは<code>#</code>です。)
+				<h3 class="ukp-paragraph" ukp-symbol="@">Paragraph3</h3>
+				シンボルは<code>ukp-symbol</code>属性を指定することで変更することができます。(デフォルトは<code>#</code>です。)
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
 <code>&lt;h3 class="ukp-paragraph"&gt;Paragraph1&lt;/h3&gt;
 abc123
 &lt;h3 class="ukp-paragraph"&gt;Paragraph2&lt;/h3&gt;
 xyz456
-&lt;h3 class="ukp-paragraph" data-symbol="@"&gt;Paragraph3&lt;/h3&gt;</code></pre>
+&lt;h3 class="ukp-paragraph" ukp-symbol="@"&gt;Paragraph3&lt;/h3&gt;</code></pre>
 
 			<p>
 				表示幅による表示制御表記(<code>@s,@m,@l,@xl</code>)も可能です。
@@ -92,19 +99,19 @@ xyz456
 				</thead>
 				<tbody>
 					<tr>
-						<td><code>ukp-paragraph@s</code></td>
+						<td><code>.ukp-paragraph@s</code></td>
 						<td><span class="uk-text-danger">640px</span> 以上の場合のみ表示</td>
 					</tr>
 					<tr>
-						<td><code>ukp-paragraph@m</code></td>
+						<td><code>.ukp-paragraph@m</code></td>
 						<td><span class="uk-text-danger">960px</span> 以上の場合のみ表示</td>
 					</tr>
 					<tr>
-						<td><code>ukp-paragraph@l</code></td>
+						<td><code>.ukp-paragraph@l</code></td>
 						<td><span class="uk-text-danger">1200px</span> 以上の場合のみ表示</td>
 					</tr>
 					<tr>
-						<td><code>ukp-paragraph@xl</code></td>
+						<td><code>.ukp-paragraph@xl</code></td>
 						<td><span class="uk-text-danger">1600px</span> 以上の場合のみ表示</td>
 					</tr>
 				</tbody>
@@ -159,8 +166,8 @@ xyz456
 			<p>
 				枠線の色も変更可能です。
 				<ul>
-					<li><code>ukp-border-primary</code> : Blue</li>
-					<li><code>ukp-border-danger</code> : Red</li>
+					<li><code>.ukp-border-primary</code> : Blue</li>
+					<li><code>.ukp-border-danger</code> : Red</li>
 				</ul>
 			</p>
 			<div class="uk-width-large ukp-boxlist ukp-border-primary uk-margin-top">
@@ -213,8 +220,8 @@ xyz456
 			<p>
 				枠線の色も変更可能です。
 				<ul>
-					<li><code>ukp-border-primary</code> : Blue</li>
-					<li><code>ukp-border-danger</code> : Red</li>
+					<li><code>.ukp-border-primary</code> : Blue</li>
+					<li><code>.ukp-border-danger</code> : Red</li>
 				</ul>
 			</p>
 			<table class="uk-table ukp-table-border ukp-border-primary uk-margin-top">
@@ -282,7 +289,7 @@ xyz456
 				サンプルとして、本ページをPCなどで表示した際に右上に表示されているメニューをご覧ください。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;div class="ukp-sidefixnav uk-visible@l"&gt;
+<code>&lt;div class="ukp-sidefixnav uk-visible@l" ukp-for-small&gt;
 	&lt;ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true"&gt;
 		&lt;li&gt;&lt;a href="#paragraph"&gt;Paragraph&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href="#sub_text"&gt;Sub Text&lt;/a&gt;&lt;/li&gt;
@@ -297,6 +304,16 @@ xyz456
 		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: home"&gt;&lt;/span&gt; funlab, Inc.&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;</code></pre>
+			<p>
+				デフォルトでは画面右端(画面幅が広がると右に移動する)に表示されますが、<br>
+				下記属性を付与することで各Containerサイズに適した(画面幅が広がっても右に移動しない)表示にできます。
+				<ul>
+					<li><code>ukp-for-xsmall</code> : <code>.uk-container-xsmall</code> に適した位置に表示します</li>
+					<li><code>ukp-for-small</code> : <code>.uk-container-small</code> に適した位置に表示します</li>
+					<li><code>ukp-for-large</code> : <code>.uk-container-large</code> に適した位置に表示します</li>
+				</ul>
+				<span class="uk-text-italic">※classではなく、属性ですのでご注意ください。</span>
+			</p>
 
 			<h2 id="floating_button"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Floating Button<p>フローティングボタン</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
@@ -337,15 +354,15 @@ xyz456
 			<h2 id="margin_mini"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Margin Mini<p>極小のマージン設定</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
-				本家UIkitの<code>uk-margin-small</code>よりも、さらに小さいマージンを設定します。
+				本家UIkitの<code>.uk-margin-small</code>よりも、さらに小さいマージンを設定します。
 			</p>
 			<p>
 				<ul>
-					<li><code>ukp-margin-mini</code></li>
-					<li><code>ukp-margin-mini-top</code></li>
-					<li><code>ukp-margin-mini-bottom</code></li>
-					<li><code>ukp-margin-mini-left</code></li>
-					<li><code>ukp-margin-mini-right</code></li>
+					<li><code>.ukp-margin-mini</code></li>
+					<li><code>.ukp-margin-mini-top</code></li>
+					<li><code>.ukp-margin-mini-bottom</code></li>
+					<li><code>.ukp-margin-mini-left</code></li>
+					<li><code>.ukp-margin-mini-right</code></li>
 				</ul>
 			</p>
 			<a class="uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right" href="#margin_mini" uk-icon="menu"></a>

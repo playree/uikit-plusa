@@ -82,12 +82,12 @@
     margin-left: -1em;
     color: #666;
 }
-.ukp-paragraph[data-symbol]::before,
-.ukp-paragraph\@s[data-symbol]::before,
-.ukp-paragraph\@m[data-symbol]::before,
-.ukp-paragraph\@l[data-symbol]::before,
-.ukp-paragraph\@xl[data-symbol]::before {
-    content: attr(data-symbol);
+.ukp-paragraph[ukp-symbol]::before,
+.ukp-paragraph\@s[ukp-symbol]::before,
+.ukp-paragraph\@m[ukp-symbol]::before,
+.ukp-paragraph\@l[ukp-symbol]::before,
+.ukp-paragraph\@xl[ukp-symbol]::before {
+    content: attr(ukp-symbol);
 }
 @media (max-width: 639px) {
     .ukp-paragraph\@s::before {
@@ -116,6 +116,15 @@
     right: 0;
     width: 200px;
     margin-right: 2rem;
+}
+.ukp-sidefixnav[ukp-for-xsmall] {
+    margin-right: calc(((100% - 750px) / 2) - 210px);
+}
+.ukp-sidefixnav[ukp-for-small] {
+    margin-right: calc(((100% - 900px) / 2) - 210px);
+}
+.ukp-sidefixnav[ukp-for-large] {
+    margin-right: calc(((100% - 1400px) / 2) - 210px);
 }
 .ukp-sidefixnav li.uk-active::before {
     content: "\0bb";
