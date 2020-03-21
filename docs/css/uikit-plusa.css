@@ -174,3 +174,18 @@
     width: 30px;
     height: 30px;
 }
+.ukp-margin-mini {
+    margin: 5px;
+}
+.ukp-margin-mini-top {
+    margin-top: 5px;
+}
+.ukp-margin-mini-bottom {
+    margin-bottom: 5px;
+}
+.ukp-margin-mini-left {
+    margin-left: 5px;
+}
+.ukp-margin-mini-right {
+    margin-right: 5px;
+}

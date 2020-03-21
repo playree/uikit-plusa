@@ -41,16 +41,18 @@
 				<li><a href="#titled_pre">Titled Preformatted Text</a></li>
 				<li><a href="#side_fix_nav">Side Fix Nav</a></li>
 				<li><a href="#floating_button">Floating Button</a></li>
+				<li><a href="#margin_mini">Margin Mini</a></li>
 				<li class="uk-nav-divider"></li>
+				<li><a href="#old_version"><span uk-icon="icon: tag"></span> Old Version</a></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
 				<li><a href="https://getuikit.com/" target="_blank"><span uk-icon="icon: uikit"></span> UIkit3</a></li>
-				<li class="uk-nav-divider"></li>
 				<li><a href="https://funlab.jp/" target="_blank"><span uk-icon="icon: home"></span> funlab, Inc.</a></li>
 			</ul>
 		</div>
 
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
-			<h1 id="top">UIkit Plus α</h1>
+			<h1 id="top" class="uk-text-bold">UIkit Plus α</h1>
+			<p>最新バージョン <span class="uk-label">v1.0.0</span></p>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
 			※UIkit 3.3.0で動作確認を行っています。
@@ -321,16 +323,41 @@ xyz456
 &lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-large" href=""&gt;+&lt;/a&gt;</code></pre>
 
 			<a class="uk-button uk-button-primary ukp-button-floating uk-button-small
-			uk-position-bottom-right uk-position-fixed uk-margin-small-right uk-margin-small-bottom" 
-			href="#top" uk-icon="arrow-up" uk-scroll></a>
+			uk-position-bottom-right uk-position-fixed ukp-margin-mini" 
+			href="#top" uk-icon="arrow-up" uk-tooltip="title: Top; pos: left" uk-scroll></a>
 			<p>
 				例えば、ページトップへスクロールするフローティングボタンの場合。<br>
 				サンプルとして、本ページ右下にあるフローティングボタンをご覧ください。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
 <code>&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-small
-	uk-position-bottom-right uk-position-fixed uk-margin-small-right uk-margin-small-bottom" 
-	href="#top" uk-icon="arrow-up" uk-scroll&gt;&lt;/a&gt;</code></pre>
+	uk-position-bottom-right uk-position-fixed ukp-margin-mini" 
+	href="#top" uk-icon="arrow-up" uk-tooltip="title: Top; pos: left" uk-scroll&gt;&lt;/a&gt;</code></pre>
+
+			<h2 id="margin_mini"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Margin Mini<p>極小のマージン設定</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
+			<p>
+				本家UIkitの<code>uk-margin-small</code>よりも、さらに小さいマージンを設定します。
+			</p>
+			<p>
+				<ul>
+					<li><code>ukp-margin-mini</code></li>
+					<li><code>ukp-margin-mini-top</code></li>
+					<li><code>ukp-margin-mini-bottom</code></li>
+					<li><code>ukp-margin-mini-left</code></li>
+					<li><code>ukp-margin-mini-right</code></li>
+				</ul>
+			</p>
+			<a class="uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right" href="#margin_mini" uk-icon="menu"></a>
+			<a class="uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right" href="#margin_mini">+</a>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;a class="uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right" href="" uk-icon="menu"&gt;&lt;/a&gt;
+&lt;a class="uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right" href=""&gt;+&lt;/a&gt;</code></pre>
+
+			<h2 id="old_version"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Old Version<p>過去のバージョン</p></span></h2>
+			<p>
+				
+			</p>
 
 		</div>
 
