@@ -28,7 +28,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
 
-		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032213">
+		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032213" />
+		<!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/playree/uikit-plusa@1.0.0/dist/uikit-plusa.min.css" /-->
 
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<style>
@@ -78,7 +79,7 @@
 								<li><a href="#margin_mini">Margin Mini</a></li>
 								<li><a href="#message_box">Message Box</a></li>
 								<li class="uk-nav-divider"></li>
-								<li><a href="#old_version"><span uk-icon="icon: tag"></span> Old Version</a></li>
+								<li><a href="#history"><span uk-icon="icon: tag"></span> History</a></li>
 								<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
 								<li><a href="https://getuikit.com/" target="_blank"><span uk-icon="icon: uikit"></span> UIkit3</a></li>
 								<li><a href="https://funlab.jp/" target="_blank"><span uk-icon="icon: home"></span> funlab, Inc.</a></li>
@@ -98,6 +99,30 @@
 		</div>
 
 		<div class="uk-container uk-container-small uk-margin-top">
+
+			<h2 id="paragraph" class="ukp-paragraph@s uk-heading-line" ukp-symbol="◇"><span class="ukp-attsubtext">About<p>作った経緯</p></span></h2>
+			<div class="ukp-mesbox" style="width: fit-content;">
+				日頃の開発の中で今後も使いそうだなと思ったものをCOMPONENT化しています。(独断と偏見によりｗ)<br>
+				同じくUIkitを使用する方の手助けになれば幸いです。<br>
+				まだまだCOMPONENTの数は少ないですが、今後も随時COMPONENTを追加していく予定です。
+			</div>
+
+			<h2 id="paragraph" class="ukp-paragraph@s uk-heading-line" ukp-symbol="◇"><span class="ukp-attsubtext">Installation<p>使い方</p></span></h2>
+			<p>
+				UIkit3と合わせて取り込んでください。<br>
+				jsDelivrのCDNを使用することができます。
+			</p>
+			<pre class="ukp-pre-title"><span>CSS</span>
+<code>&lt;!-- uikit --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css&quot; /&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- uikit plusa --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/playree/uikit-plusa@1.0.0/dist/uikit-plusa.min.css&quot; /&gt;</code></pre>
+			<p>
+				ローカルに取り込む場合は、<a href="https://github.com/playree/uikit-plusa/releases">GitHubのリリースページ</a>よりダウンロードすることができます。<br>
+			</p>
 
 			<h2 id="paragraph" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Paragraph<p>段落表示</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
@@ -438,9 +463,25 @@ xyz456
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-			<h2 id="old_version"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Old Version<p>過去のバージョン</p></span></h2>
-			<p>
-			</p>
+			<h2 id="old_version"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
+			<table class="uk-table uk-table-divider">
+				<thead>
+					<tr>
+						<th>Ver</th>
+						<th>Date</th>
+						<th class="uk-width-1-1">Note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.0.0</td>
+						<td>2020/03/22</td>
+						<td>
+							初版リリース。
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
 		</div>
 
