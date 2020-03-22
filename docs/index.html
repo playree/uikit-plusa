@@ -38,6 +38,7 @@
 		</style>
 	</head>
 	<body>
+		<div id="top"></div>
 
 		<div class="ukp-sidefixnav uk-visible@l" ukp-for-small>
 			<ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
@@ -49,6 +50,7 @@
 				<li><a href="#side_fix_nav">Side Fix Nav</a></li>
 				<li><a href="#floating_button">Floating Button</a></li>
 				<li><a href="#margin_mini">Margin Mini</a></li>
+				<li><a href="#message_box">Message Box</a></li>
 				<li class="uk-nav-divider"></li>
 				<li><a href="#old_version"><span uk-icon="icon: tag"></span> Old Version</a></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
@@ -57,8 +59,38 @@
 			</ul>
 		</div>
 
+		<nav class="uk-navbar-container" uk-navbar="dropbar: true;">
+			<div class="uk-navbar-right  uk-hidden@l">
+				<ul class="uk-navbar-nav">
+					<li>
+						<a class="uk-navbar-toggle" href="#" style="min-height: unset; padding: 8px;">
+							<span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+						</a>
+						<div class="uk-navbar-dropdown">
+							<ul class="uk-nav uk-navbar-dropdown-nav">
+								<li><a href="#paragraph">Paragraph</a></li>
+								<li><a href="#sub_text">Sub Text</a></li>
+								<li><a href="#box_list">Box List</a></li>
+								<li><a href="#border_table">Border Table</a></li>
+								<li><a href="#titled_pre">Titled Preformatted Text</a></li>
+								<li><a href="#side_fix_nav">Side Fix Nav</a></li>
+								<li><a href="#floating_button">Floating Button</a></li>
+								<li><a href="#margin_mini">Margin Mini</a></li>
+								<li><a href="#message_box">Message Box</a></li>
+								<li class="uk-nav-divider"></li>
+								<li><a href="#old_version"><span uk-icon="icon: tag"></span> Old Version</a></li>
+								<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
+								<li><a href="https://getuikit.com/" target="_blank"><span uk-icon="icon: uikit"></span> UIkit3</a></li>
+								<li><a href="https://funlab.jp/" target="_blank"><span uk-icon="icon: home"></span> funlab, Inc.</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
-			<h1 id="top" class="uk-text-bold">UIkit Plus α</h1>
+			<h1 class="uk-text-bold">UIkit Plus α</h1>
 			<p>最新バージョン <span class="uk-label">v1.0.0</span></p>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
@@ -81,11 +113,11 @@
 				シンボルは<code>ukp-symbol</code>属性を指定することで変更することができます。(デフォルトは<code>#</code>です。)
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;h3 class="ukp-paragraph"&gt;Paragraph1&lt;/h3&gt;
+<code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;Paragraph1&lt;/h3&gt;
 abc123
-&lt;h3 class="ukp-paragraph"&gt;Paragraph2&lt;/h3&gt;
+&lt;h3 class=&quot;ukp-paragraph&quot;&gt;Paragraph2&lt;/h3&gt;
 xyz456
-&lt;h3 class="ukp-paragraph" ukp-symbol="@"&gt;Paragraph3&lt;/h3&gt;</code></pre>
+&lt;h3 class=&quot;ukp-paragraph&quot; ukp-symbol=&quot;@&quot;&gt;Paragraph3&lt;/h3&gt;</code></pre>
 
 			<p>
 				表示幅による表示制御表記(<code>@s,@m,@l,@xl</code>)も可能です。
@@ -131,9 +163,9 @@ xyz456
 				UIkitの<code>uk-heading-line</code>などと組み合わせることもできます。
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;h3 class="ukp-paragraph"&gt;&lt;span class="ukp-attsubtext"&gt;Main Text&lt;p&gt;Sub text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;h3 class="ukp-paragraph"&gt;&lt;span class="ukp-attsubtext-end"&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;h3 class="ukp-paragraph uk-heading-line"&gt;&lt;span class="ukp-attsubtext-end"&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;</code></pre>
+<code>&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext&quot;&gt;Main Text&lt;p&gt;Sub text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class=&quot;ukp-paragraph&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class=&quot;ukp-paragraph uk-heading-line&quot;&gt;&lt;span class=&quot;ukp-attsubtext-end&quot;&gt;ABCDefgh&lt;p&gt;End text&lt;/p&gt;&lt;/span&gt;&lt;/h3&gt;</code></pre>
 
 			<h2 id="box_list" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Box List<p>ボックスタイプのリスト</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
@@ -152,15 +184,15 @@ xyz456
 				<a class="ukp-boxlist-item" href="#box_list"><h3>Header</h3>substring789</a>
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;div class="uk-width-large ukp-boxlist uk-margin-top"&gt;
-	&lt;div class="ukp-boxlist-item"&gt;abc123&lt;/div&gt;
-	&lt;div class="ukp-boxlist-item"&gt;xyz456&lt;/div&gt;
-	&lt;div class="ukp-boxlist-item"&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/div&gt;
+<code>&lt;div class=&quot;uk-width-large ukp-boxlist uk-margin-top&quot;&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;abc123&lt;/div&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;xyz456&lt;/div&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="uk-width-large ukp-boxlist uk-margin-top"&gt;
-	&lt;a class="ukp-boxlist-item" href=""&gt;abc123&lt;/a&gt;
-	&lt;a class="ukp-boxlist-item" href=""&gt;xyz456&lt;/a&gt;
-	&lt;a class="ukp-boxlist-item" href=""&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/a&gt;
+&lt;div class=&quot;uk-width-large ukp-boxlist uk-margin-top&quot;&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;abc123&lt;/a&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;xyz456&lt;/a&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;substring789&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 
 			<p>
@@ -179,13 +211,13 @@ xyz456
 				<a class="ukp-boxlist-item" href="#box_list">xyz456</a>
 			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;div class="uk-width-large ukp-boxlist ukp-border-primary uk-margin-top"&gt;
-	&lt;div class="ukp-boxlist-item"&gt;abc123&lt;/div&gt;
-	&lt;div class="ukp-boxlist-item"&gt;xyz456&lt;/div&gt;
+<code>&lt;div class=&quot;uk-width-large ukp-boxlist ukp-border-primary uk-margin-top&quot;&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;abc123&lt;/div&gt;
+	&lt;div class=&quot;ukp-boxlist-item&quot;&gt;xyz456&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="uk-width-large ukp-boxlist ukp-border-danger uk-margin-top"&gt;
-	&lt;a class="ukp-boxlist-item" href=""&gt;abc123&lt;/a&gt;
-	&lt;a class="ukp-boxlist-item" href=""&gt;xyz456&lt;/a&gt;
+&lt;div class=&quot;uk-width-large ukp-boxlist ukp-border-danger uk-margin-top&quot;&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;abc123&lt;/a&gt;
+	&lt;a class=&quot;ukp-boxlist-item&quot; href=&quot;&quot;&gt;xyz456&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 
 			<h2 id="border_table" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Border Table<p>枠線タイプのテーブル</p></span></h2>
@@ -205,7 +237,7 @@ xyz456
 				</tr>
 			</table>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;table class="uk-table ukp-table-border uk-margin-top"&gt;
+<code>&lt;table class=&quot;uk-table ukp-table-border uk-margin-top&quot;&gt;
 	&lt;tr&gt;
 		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
 	&lt;/tr&gt;
@@ -241,7 +273,7 @@ xyz456
 				</tr>
 			</table>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;table class="uk-table ukp-table-border ukp-border-primary uk-margin-top"&gt;
+<code>&lt;table class=&quot;uk-table ukp-table-border ukp-border-primary uk-margin-top&quot;&gt;
 	&lt;tr&gt;
 		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
 	&lt;/tr&gt;
@@ -249,7 +281,7 @@ xyz456
 		&lt;td&gt;abc&lt;/td&gt;&lt;td&gt;def&lt;/td&gt;&lt;td&gt;ghi&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
-&lt;table class="uk-table ukp-table-border ukp-border-danger uk-margin-top"&gt;
+&lt;table class=&quot;uk-table ukp-table-border ukp-border-danger uk-margin-top&quot;&gt;
 	&lt;tr&gt;
 		&lt;th&gt;TH1&lt;/th&gt;&lt;th&gt;TH2&lt;/th&gt;&lt;th&gt;TH3&lt;/th&gt;
 	&lt;/tr&gt;
@@ -265,19 +297,19 @@ xyz456
 				左上にタイトルを付けることができます。
 			</p>
 			<pre class="ukp-pre-title"><span>CSS</span>
-<code>&lt;pre class="ukp-pre-title"&gt;&lt;span&gt;CSS&lt;/span&gt;
+<code>&lt;pre class=&quot;ukp-pre-title&quot;&gt;&lt;span&gt;CSS&lt;/span&gt;
 &lt;code&gt;Titled Preformatted text&lt;/code&gt;&lt;/pre&gt;</code></pre>
 			<p>
 				下記ダークモードとの２種類を用意しています。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;pre class="ukp-pre-title-dark"&gt;&lt;span&gt;CSS&lt;/span&gt;
+<code>&lt;pre class=&quot;ukp-pre-title-dark&quot;&gt;&lt;span&gt;CSS&lt;/span&gt;
 &lt;code&gt;Titled Preformatted Text&lt;/code&gt;&lt;/pre&gt;</code></pre>
 			<p>
 				<code>&lt;pre&gt;</code> 直下の <code>&lt;span&gt;</code> の中身がタイトルになります。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>Title</span>
-<code>&lt;pre class="ukp-pre-title-dark"&gt;&lt;span&gt;Title&lt;/span&gt;
+<code>&lt;pre class=&quot;ukp-pre-title-dark&quot;&gt;&lt;span&gt;Title&lt;/span&gt;
 &lt;code&gt;Titled Preformatted Text&lt;/code&gt;&lt;/pre&gt;</code></pre>
 
 			<h2 id="side_fix_nav" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Side Fix Nav<p>右上固定のナビゲーション</p></span></h2>
@@ -289,19 +321,19 @@ xyz456
 				サンプルとして、本ページをPCなどで表示した際に右上に表示されているメニューをご覧ください。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;div class="ukp-sidefixnav uk-visible@l" ukp-for-small&gt;
-	&lt;ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true"&gt;
-		&lt;li&gt;&lt;a href="#paragraph"&gt;Paragraph&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#sub_text"&gt;Sub Text&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#box_list"&gt;Box List&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#border_table"&gt;Border Table&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#titled_pre"&gt;Titled Preformatted Text&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#side_fix_nav"&gt;Side Fix Nav&lt;/a&gt;&lt;/li&gt;
-		&lt;li class="uk-nav-divider"&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: github"&gt;&lt;/span&gt; Source&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: uikit"&gt;&lt;/span&gt; UIkit3&lt;/a&gt;&lt;/li&gt;
-		&lt;li class="uk-nav-divider"&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="" target="_blank"&gt;&lt;span uk-icon="icon: home"&gt;&lt;/span&gt; funlab, Inc.&lt;/a&gt;&lt;/li&gt;
+<code>&lt;div class=&quot;ukp-sidefixnav uk-visible@l&quot; ukp-for-small&gt;
+	&lt;ul class=&quot;uk-nav uk-nav-default&quot; uk-scrollspy-nav=&quot;closest: li; scroll: true&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#paragraph&quot;&gt;Paragraph&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sub_text&quot;&gt;Sub Text&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#box_list&quot;&gt;Box List&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#border_table&quot;&gt;Border Table&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#titled_pre&quot;&gt;Titled Preformatted Text&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#side_fix_nav&quot;&gt;Side Fix Nav&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;uk-nav-divider&quot;&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;span uk-icon=&quot;icon: github&quot;&gt;&lt;/span&gt; Source&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;span uk-icon=&quot;icon: uikit&quot;&gt;&lt;/span&gt; UIkit3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;uk-nav-divider&quot;&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;span uk-icon=&quot;icon: home&quot;&gt;&lt;/span&gt; funlab, Inc.&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 			<p>
@@ -323,8 +355,8 @@ xyz456
 			<a class="uk-button uk-button-primary ukp-button-floating" href="#floating_button" uk-icon="menu"></a>
 			<a class="uk-button uk-button-danger ukp-button-floating" href="#floating_button">+</a>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;a class="uk-button uk-button-primary ukp-button-floating" href="" uk-icon="menu"&gt;&lt;/a&gt;
-&lt;a class="uk-button uk-button-danger ukp-button-floating" href=""&gt;+&lt;/a&gt;</code></pre>
+<code>&lt;a class=&quot;uk-button uk-button-primary ukp-button-floating&quot; href=&quot;&quot; uk-icon=&quot;menu&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;uk-button uk-button-danger ukp-button-floating&quot; href=&quot;&quot;&gt;+&lt;/a&gt;</code></pre>
 			<p>
 				SmallサイズとLargeサイズ。
 			</p>
@@ -334,10 +366,10 @@ xyz456
 			<a class="uk-button uk-button-primary ukp-button-floating uk-button-large" href="#floating_button" uk-icon="menu"></a>
 			<a class="uk-button uk-button-danger ukp-button-floating uk-button-large" href="#floating_button">+</a>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-small" href="" uk-icon="menu"&gt;&lt;/a&gt;
-&lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-small" href=""&gt;+&lt;/a&gt;
-&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-large" href="" uk-icon="menu"&gt;&lt;/a&gt;
-&lt;a class="uk-button uk-button-danger ukp-button-floating uk-button-large" href=""&gt;+&lt;/a&gt;</code></pre>
+<code>&lt;a class=&quot;uk-button uk-button-primary ukp-button-floating uk-button-small&quot; href=&quot;&quot; uk-icon=&quot;menu&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;uk-button uk-button-danger ukp-button-floating uk-button-small&quot; href=&quot;&quot;&gt;+&lt;/a&gt;
+&lt;a class=&quot;uk-button uk-button-primary ukp-button-floating uk-button-large&quot; href=&quot;&quot; uk-icon=&quot;menu&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;uk-button uk-button-danger ukp-button-floating uk-button-large&quot; href=&quot;&quot;&gt;+&lt;/a&gt;</code></pre>
 
 			<a class="uk-button uk-button-primary ukp-button-floating uk-button-small
 			uk-position-bottom-right uk-position-fixed ukp-margin-mini" 
@@ -347,9 +379,9 @@ xyz456
 				サンプルとして、本ページ右下にあるフローティングボタンをご覧ください。
 			</p>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;a class="uk-button uk-button-primary ukp-button-floating uk-button-small
-	uk-position-bottom-right uk-position-fixed ukp-margin-mini" 
-	href="#top" uk-icon="arrow-up" uk-tooltip="title: Top; pos: left" uk-scroll&gt;&lt;/a&gt;</code></pre>
+<code>&lt;a class=&quot;uk-button uk-button-primary ukp-button-floating uk-button-small
+	uk-position-bottom-right uk-position-fixed ukp-margin-mini&quot; 
+	href=&quot;#top&quot; uk-icon=&quot;arrow-up&quot; uk-tooltip=&quot;title: Top; pos: left&quot; uk-scroll&gt;&lt;/a&gt;</code></pre>
 
 			<h2 id="margin_mini"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Margin Mini<p>極小のマージン設定</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
@@ -368,12 +400,45 @@ xyz456
 			<a class="uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right" href="#margin_mini" uk-icon="menu"></a>
 			<a class="uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right" href="#margin_mini">+</a>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
-<code>&lt;a class="uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right" href="" uk-icon="menu"&gt;&lt;/a&gt;
-&lt;a class="uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right" href=""&gt;+&lt;/a&gt;</code></pre>
+<code>&lt;a class=&quot;uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right&quot; href=&quot;&quot; uk-icon=&quot;menu&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right&quot; href=&quot;&quot;&gt;+&lt;/a&gt;</code></pre>
+
+			<h2 id="message_box"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Message Box<p>メッセージ表示</p></span></h2>
+			<p>
+				シンプルなメッセージ表示です。
+			</p>
+			<div class="ukp-mesbox uk-width-medium">
+				This is a message.<br>
+				Simple is the best.
+				<p class="uk-text-right">UIkit Plus α</p>
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div class=&quot;ukp-mesbox uk-width-medium&quot;&gt;
+	This is a message.&lt;br&gt;
+	Simple is the best.
+	&lt;p class=&quot;uk-text-right&quot;&gt;UIkit Plus α&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<p>
+				背景色を設定したい場合。
+			</p>
+			<div class="ukp-mesbox uk-width-medium">
+				<div class="uk-padding-small" style="background-color: #faf8f0;">
+					This is a message.<br>
+					Simple is the best.
+					<p class="uk-text-right">UIkit Plus α</p>
+				</div>
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div class=&quot;ukp-mesbox uk-width-medium&quot;&gt;
+	&lt;div class=&quot;uk-padding-small&quot; style=&quot;background-color: #faf8f0;&quot;&gt;
+		This is a message.&lt;br&gt;
+		Simple is the best.
+		&lt;p class=&quot;uk-text-right&quot;&gt;UIkit Plus α&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 			<h2 id="old_version"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Old Version<p>過去のバージョン</p></span></h2>
 			<p>
-				
 			</p>
 
 		</div>
