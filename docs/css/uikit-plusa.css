@@ -225,3 +225,23 @@
     margin: 0; 
     padding: 0;
 }
+.ukp-input-field {
+    position: relative;
+    margin-top: 2em;
+}
+.ukp-input-label {
+    position: absolute;
+    top: 0.75em;
+    left: 0.5em;
+    color: #aaa;
+    line-height: 1;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.ukp-input-field>input:focus+.ukp-input-label,
+.ukp-input-field>input[ukp-active]+.ukp-input-label {
+    top: -1.5em;
+    left: 0.25em;
+    font-size: 0.8em;
+    color: #777;
+}

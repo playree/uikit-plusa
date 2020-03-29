@@ -40,6 +40,7 @@
 
 		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032213" />
 		<!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/playree/uikit-plusa@1.0.0/dist/uikit-plusa.min.css" /-->
+		<script src="./js/uikit-plusa.js"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<style>
@@ -62,6 +63,7 @@
 				<li><a href="#floating_button">Floating Button</a></li>
 				<li><a href="#margin_mini">Margin Mini</a></li>
 				<li><a href="#message_box">Message Box</a></li>
+				<li><a href="#movable_label_input">Movable Label Input</a></li>
 				<li class="uk-nav-divider"></li>
 				<li><a href="#old_version"><span uk-icon="icon: tag"></span> Old Version</a></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
@@ -88,6 +90,7 @@
 								<li><a href="#floating_button">Floating Button</a></li>
 								<li><a href="#margin_mini">Margin Mini</a></li>
 								<li><a href="#message_box">Message Box</a></li>
+								<li><a href="#movable_label_input">Movable Label Input</a></li>
 								<li class="uk-nav-divider"></li>
 								<li><a href="#history"><span uk-icon="icon: tag"></span> History</a></li>
 								<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
@@ -102,7 +105,7 @@
 
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
 			<h1 class="uk-text-bold">UIkit Plus α</h1>
-			<p>最新バージョン <span class="uk-label">v1.0.0</span></p>
+			<p>最新バージョン <span class="uk-label">v1.0.1</span></p>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
 			<span class="uk-text-italic">※UIkit 3.3.0で動作確認を行っています。</span>
@@ -440,6 +443,7 @@ xyz456
 &lt;a class=&quot;uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right&quot; href=&quot;&quot;&gt;+&lt;/a&gt;</code></pre>
 
 			<h2 id="message_box"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Message Box<p>メッセージ表示</p></span></h2>
+			<span class="uk-label">v1.0.0～</span>
 			<p>
 				シンプルなメッセージ表示です。
 			</p>
@@ -471,6 +475,29 @@ xyz456
 		Simple is the best.
 		&lt;p class=&quot;uk-text-right&quot;&gt;UIkit Plus α&lt;/p&gt;
 	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+			<h2 id="movable_label_input"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Movable Label Input<p>ラベルが動くインプットボックス</p></span></h2>
+			<span class="uk-label">v1.0.1～</span>
+			<p>
+				プレースホルダ的な表示(通常時)から、ラベルが上部に移動する(フォーカス時)タイプのインプットボックスです。
+			</p>
+			<div class="ukp-input-field">
+				<input id="mli1" class="uk-input uk-form-width-medium" type="text">
+				<label class="ukp-input-label" for="mli1">label</label>
+			</div>
+			<div class="ukp-input-field">
+				<input id="mli2" class="uk-input uk-form-width-medium" type="text" value="Test">
+				<label class="ukp-input-label" for="mli2">label</label>
+			</div>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div class=&quot;ukp-input-field&quot;&gt;
+	&lt;input id=&quot;mli1&quot; class=&quot;uk-input uk-form-width-medium&quot; type=&quot;text&quot;&gt;
+	&lt;label class=&quot;ukp-input-label&quot; for=&quot;mli1&quot;&gt;label&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ukp-input-field&quot;&gt;
+	&lt;input id=&quot;mli2&quot; class=&quot;uk-input uk-form-width-medium&quot; type=&quot;text&quot; value=&quot;Test&quot;&gt;
+	&lt;label class=&quot;ukp-input-label&quot; for=&quot;mli2&quot;&gt;label&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
 			<h2 id="old_version"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
