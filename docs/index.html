@@ -17,7 +17,7 @@
 		<meta name="description" content="Extension for UIkit3">
 		<meta name="keywords" content="uikit,uikit3,css">
 		<meta name="author" content="Kazuki Minakawa (funlab, Inc.)">
-		<title>UIkit Plus α</title>
+		<title>UIkit Plus α - UIkit3の拡張モジュール</title>
 		<link rel="shortcut icon" href="./favicon.ico">
 
 		<!-- OGP -->
@@ -38,9 +38,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
 
-		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020032921" />
+		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020033121" />
 		<!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/playree/uikit-plusa@1.0.0/dist/uikit-plusa.min.css" /-->
-		<script src="./js/uikit-plusa.js?v=2020032921"></script>
+		<script src="./js/uikit-plusa.js?v=2020033121"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<style>
@@ -52,7 +52,7 @@
 	<body>
 		<div id="top"></div>
 
-		<div class="ukp-sidefixnav uk-visible@l" ukp-for-small>
+		<div class="ukp-sidefixnav uk-visible@l" ukp-for-small ukp-scroll>
 			<ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
 				<li><a href="#paragraph">Paragraph</a></li>
 				<li><a href="#sub_text">Sub Text</a></li>
@@ -65,7 +65,7 @@
 				<li><a href="#message_box">Message Box</a></li>
 				<li><a href="#movable_label_input">Movable Label Input</a></li>
 				<li class="uk-nav-divider"></li>
-				<li><a href="#old_version"><span uk-icon="icon: tag"></span> Old Version</a></li>
+				<li><a href="#history"><span uk-icon="icon: tag"></span> History</a></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
 				<li><a href="https://getuikit.com/" target="_blank"><span uk-icon="icon: uikit"></span> UIkit3</a></li>
 				<li><a href="https://funlab.jp/" target="_blank"><span uk-icon="icon: home"></span> funlab, Inc.</a></li>
@@ -105,7 +105,7 @@
 
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
 			<h1 class="uk-text-bold">UIkit Plus α</h1>
-			<p>最新バージョン <span class="uk-label">v1.0.1</span></p>
+			<p>最新バージョン <span class="uk-label">v1.0.2</span></p>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
 			<span class="uk-text-italic">※UIkit 3.3.0で動作確認を行っています。</span>
@@ -352,7 +352,7 @@ xyz456
 &lt;code&gt;Titled Preformatted Text&lt;/code&gt;&lt;/pre&gt;</code></pre>
 
 			<h2 id="side_fix_nav" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Side Fix Nav<p>右上固定のナビゲーション</p></span></h2>
-			<span class="uk-label">v1.0.0～</span>
+			<span class="uk-label">v1.0.0～</span> <span class="uk-label uk-label-success">update : v1.0.2</span>
 			<p>
 				右上に固定表示するナビゲーションです。<br>
 				基本的には本家UIkitの<code>Scrollspy nav</code>の動作になります。<br>
@@ -384,6 +384,9 @@ xyz456
 					<li><code>ukp-for-large</code> : <code>.uk-container-large</code> に適した位置に表示します</li>
 				</ul>
 				<span class="uk-text-italic">※classではなく、属性ですのでご注意ください。</span>
+			</p>
+			<p>
+				<code>ukp-scroll</code> の属性を付与することで、スクロールするよう(高さは600pxに固定)にすることもできます。
 			</p>
 
 			<h2 id="floating_button"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Floating Button<p>フローティングボタン</p></span></h2>
@@ -501,7 +504,7 @@ xyz456
 	&lt;label class=&quot;ukp-input-label&quot; for=&quot;mli2&quot;&gt;label&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
-			<h2 id="old_version"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
+			<h2 id="history"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
 			<table class="uk-table uk-table-divider">
 				<thead>
 					<tr>
@@ -511,6 +514,13 @@ xyz456
 					</tr>
 				</thead>
 				<tbody>
+					<tr>
+						<td>1.0.2</td>
+						<td>2020/04/01</td>
+						<td>
+							Side Fix Nav をスクロール可能に。
+						</td>
+					</tr>
 					<tr>
 						<td>1.0.1</td>
 						<td>2020/03/29</td>
