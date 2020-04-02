@@ -1,4 +1,4 @@
-/*! UIkit Plus α 1.0.1 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
+/*! UIkit Plus α 1.0.2 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
 
 .ukp-attsubtext,
 .ukp-attsubtext-end {
@@ -117,14 +117,34 @@
     width: 200px;
     margin-right: 2rem;
 }
+.ukp-sidefixnav[ukp-scroll] {
+    height: 600px;
+    overflow-y: scroll;
+}
 .ukp-sidefixnav[ukp-for-xsmall] {
-    margin-right: calc(((100% - 750px) / 2) - 210px);
+    margin-right: calc(((100% - 750px) / 2) - 220px);
+}
+@media (min-width: 1450px) {
+    .ukp-sidefixnav {
+        width: 300px;
+    }
+    .ukp-sidefixnav[ukp-for-xsmall] {
+        margin-right: calc(((100% - 750px) / 2) - 320px);
+    }
 }
 .ukp-sidefixnav[ukp-for-small] {
-    margin-right: calc(((100% - 900px) / 2) - 210px);
+    margin-right: calc(((100% - 900px) / 2) - 220px);
+}
+@media (min-width: 1600px) {
+    .ukp-sidefixnav {
+        width: 300px;
+    }
+    .ukp-sidefixnav[ukp-for-small] {
+        margin-right: calc(((100% - 900px) / 2) - 320px);
+    }
 }
 .ukp-sidefixnav[ukp-for-large] {
-    margin-right: calc(((100% - 1400px) / 2) - 210px);
+    margin-right: calc(((100% - 1400px) / 2) - 220px);
 }
 .ukp-sidefixnav li.uk-active::before {
     content: "\0bb";
@@ -237,6 +257,12 @@
     line-height: 1;
     -webkit-transition: all .2s;
     transition: all .2s;
+}
+.uk-form-large+.ukp-input-label {
+    font-size: 1.25rem;
+}
+.uk-form-small+.ukp-input-label {
+    font-size: 0.875rem;
 }
 .ukp-input-field>input:focus+.ukp-input-label,
 .ukp-input-field>input[ukp-active]+.ukp-input-label {

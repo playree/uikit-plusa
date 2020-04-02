@@ -1,4 +1,4 @@
-/*! UIkit Plus α 1.0.1 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
+/*! UIkit Plus α 1.0.2 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
 
 document.addEventListener('DOMContentLoaded', function () {
     ukpReady();
