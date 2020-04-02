@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161611389-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-161611389-1');
-		</script>
-
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Extension for UIkit3">
-		<meta name="keywords" content="uikit,uikit3,css">
+		<meta name="description" content="UIkit3の拡張モジュールです。利用できるCOMPONENTSを少し追加します。">
+		<meta name="keywords" content="uikit,uikit3,css,拡張">
 		<meta name="author" content="Kazuki Minakawa (funlab, Inc.)">
 		<title>UIkit Plus α - UIkit3の拡張モジュール</title>
 		<link rel="shortcut icon" href="./favicon.ico">
@@ -33,6 +23,16 @@
 		<meta property="twitter:description" content="Extension for UIkit3">
 		<meta property="twitter:image" content="https://playree.github.io/uikit-plusa/og.png">
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161611389-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-161611389-1');
+		</script>
+
 		<!-- uikit -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
@@ -42,6 +42,7 @@
 		<!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/playree/uikit-plusa@1.0.0/dist/uikit-plusa.min.css" /-->
 		<script src="./js/uikit-plusa.js?v=2020033121"></script>
 
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<style>
 			html,h2,h3,h4,h5,h6 {
@@ -389,7 +390,7 @@ xyz456
 				<code>ukp-scroll</code> の属性を付与することで、スクロールするよう(高さは600pxに固定)にすることもできます。
 			</p>
 
-			<h2 id="floating_button"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Floating Button<p>フローティングボタン</p></span></h2>
+			<h2 id="floating_button" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Floating Button<p>フローティングボタン</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				フローティングの丸ボタンです。
@@ -425,7 +426,7 @@ xyz456
 	uk-position-bottom-right uk-position-fixed ukp-margin-mini&quot; 
 	href=&quot;#top&quot; uk-icon=&quot;arrow-up&quot; uk-tooltip=&quot;title: Top; pos: left&quot; uk-scroll&gt;&lt;/a&gt;</code></pre>
 
-			<h2 id="margin_mini"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Margin Mini<p>極小のマージン設定</p></span></h2>
+			<h2 id="margin_mini" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Margin Mini<p>極小のマージン設定</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				本家UIkitの<code>.uk-margin-small</code>よりも、さらに小さいマージンを設定します。<br>
@@ -446,7 +447,7 @@ xyz456
 <code>&lt;a class=&quot;uk-button uk-button-primary ukp-button-floating ukp-margin-mini-right&quot; href=&quot;&quot; uk-icon=&quot;menu&quot;&gt;&lt;/a&gt;
 &lt;a class=&quot;uk-button uk-button-danger ukp-button-floating ukp-margin-mini-right&quot; href=&quot;&quot;&gt;+&lt;/a&gt;</code></pre>
 
-			<h2 id="message_box"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Message Box<p>メッセージ表示</p></span></h2>
+			<h2 id="message_box" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Message Box<p>メッセージ表示</p></span></h2>
 			<span class="uk-label">v1.0.0～</span>
 			<p>
 				シンプルなメッセージ表示です。
@@ -481,8 +482,8 @@ xyz456
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-			<h2 id="movable_label_input"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Movable Label Input<p>ラベルが動くインプットボックス</p></span></h2>
-			<span class="uk-label">v1.0.1～</span>
+			<h2 id="movable_label_input" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Movable Label Input<p>ラベルが動くインプットボックス</p></span></h2>
+			<span class="uk-label">v1.0.1～</span> <span class="uk-label uk-label-success">update : v1.0.2</span>
 			<p>
 				プレースホルダ的な表示(通常時)から、ラベルが上部に移動する(フォーカス時)タイプのインプットボックスです。
 			</p>
@@ -494,6 +495,14 @@ xyz456
 				<input id="mli2" class="uk-input uk-form-width-medium" type="text" value="Test">
 				<label class="ukp-input-label" for="mli2">label</label>
 			</div>
+			<div class="ukp-input-field">
+				<input id="mli3" class="uk-input uk-form-width-medium uk-form-large" type="text">
+				<label class="ukp-input-label" for="mli3">Large</label>
+			</div>
+			<div class="ukp-input-field">
+				<input id="mli4" class="uk-input uk-form-width-medium uk-form-small" type="text">
+				<label class="ukp-input-label" for="mli4">Small</label>
+			</div>
 			<pre class="ukp-pre-title-dark"><span>CSS</span>
 <code>&lt;div class=&quot;ukp-input-field&quot;&gt;
 	&lt;input id=&quot;mli1&quot; class=&quot;uk-input uk-form-width-medium&quot; type=&quot;text&quot;&gt;
@@ -504,7 +513,7 @@ xyz456
 	&lt;label class=&quot;ukp-input-label&quot; for=&quot;mli2&quot;&gt;label&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
-			<h2 id="history"" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
+			<h2 id="history" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
 			<table class="uk-table uk-table-divider">
 				<thead>
 					<tr>
@@ -518,7 +527,8 @@ xyz456
 						<td>1.0.2</td>
 						<td>2020/04/01</td>
 						<td>
-							Side Fix Nav をスクロール可能に。
+							Side Fix Nav をスクロール可能に。<br>
+							Movable Label Input をLarge/Smallサイズに対応。
 						</td>
 					</tr>
 					<tr>
