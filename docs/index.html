@@ -38,9 +38,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
 
-		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020040223" />
+		<link rel="stylesheet" href="./css/uikit-plusa.css?v=2020042121" />
 		<!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/playree/uikit-plusa@1.0.0/dist/uikit-plusa.min.css" /-->
-		<script src="./js/uikit-plusa.js?v=2020040223"></script>
+		<script src="./js/uikit-plusa.js?v=2020042121"></script>
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
@@ -65,6 +65,7 @@
 				<li><a href="#margin_mini">Margin Mini</a></li>
 				<li><a href="#message_box">Message Box</a></li>
 				<li><a href="#movable_label_input">Movable Label Input</a></li>
+				<li><a href="#infinite_scroll">Infinite Scroll</a></li>
 				<li class="uk-nav-divider"></li>
 				<li><a href="#history"><span uk-icon="icon: tag"></span> History</a></li>
 				<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
@@ -92,6 +93,7 @@
 								<li><a href="#margin_mini">Margin Mini</a></li>
 								<li><a href="#message_box">Message Box</a></li>
 								<li><a href="#movable_label_input">Movable Label Input</a></li>
+								<li><a href="#infinite_scroll">Infinite Scroll</a></li>
 								<li class="uk-nav-divider"></li>
 								<li><a href="#history"><span uk-icon="icon: tag"></span> History</a></li>
 								<li><a href="https://github.com/playree/uikit-plusa" target="_blank"><span uk-icon="icon: github"></span> Source</a></li>
@@ -106,7 +108,7 @@
 
 		<div class="uk-container uk-container-small uk-margin-top uk-text-center">
 			<h1 class="uk-text-bold">UIkit Plus α</h1>
-			<p>最新バージョン <span class="uk-label">v1.0.2</span></p>
+			<p>最新バージョン <span class="uk-label">v1.0.3</span></p>
 			<a href="https://getuikit.com/">UIkit3</a>と合わせて取り込むことで、少し拡張(使用できるCOMPONENTSを追加)することができます。<br>
 			追加されるCOMPONENTSについては以降のサンプルを参照ください。<br>
 			<span class="uk-text-italic">※UIkit 3.3.0で動作確認を行っています。</span>
@@ -526,6 +528,47 @@ xyz456
 	&lt;label class=&quot;ukp-input-label&quot; for=&quot;mli4&quot;&gt;Small&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
+			<h2 id="infinite_scroll" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">Infinite Scroll<p>無限スクロール</p></span></h2>
+			<span class="uk-label">v1.0.3～</span>
+			<p>
+				最後までスクロールした際に自動で続きのデータを読み込むことで、最終データまでの無限スクロールを実現します。
+			</p>
+			<div id="scroll_area" class="uk-container uk-container-xsmall uk-margin-top" 
+			style="height: 300px; overflow-y: scroll; border: solid 1px #ddd; padding: 1rem;">
+				<div id="loading" class="uk-width-1-1 uk-text-center uk-margin-top">
+					<span uk-spinner="ratio: 3"></span>
+				</div>
+			</div>
+			<script>
+				const el_item = '<div class="uk-card uk-card-primary uk-card-body uk-margin-bottom">' +
+					'<h3 class="uk-card-title">Item{{count}}</h3>' +
+					'<p>Try scrolling down.</p>' +
+					'<p>下にスクロールしてみてください。</p>' +
+					'</div>';
+	
+				document.addEventListener('DOMContentLoaded', () => {
+					let sc_count = 1;
+					let sc = new UkpInfiniteScroll(
+						document.getElementById('scroll_area'),
+						document.getElementById('loading'),
+						(obj, count) => {
+							console.log('loadItem', count);
+							// ここで通信などで表示アイテムを読み込む。
+							// setTimeout()の部分を通信などに置き換えてください。
+							setTimeout(() => {
+								for (i=0; i<5; i++) {
+									obj.add(el_item.replace('{{count}}', sc_count++));
+								}
+								if (sc_count > 20) {
+									obj.finish();
+								} else {
+									obj.comp();
+								}
+							}, 1000)
+						});
+				});
+			</script>
+
 			<h2 id="history" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
 			<table class="uk-table uk-table-divider">
 				<thead>
@@ -536,6 +579,13 @@ xyz456
 					</tr>
 				</thead>
 				<tbody>
+					<tr>
+						<td>1.0.3</td>
+						<td>2020/04/21</td>
+						<td>
+							Infinite Scroll を追加。
+						</td>
+					</tr>
 					<tr>
 						<td>1.0.2</td>
 						<td>2020/04/01</td>
