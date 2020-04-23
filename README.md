@@ -9,7 +9,7 @@ UIkit3と合わせて取り込むことで、少し拡張(使用できるCOMPONE
 ## Licence
 [MIT](https://github.com/playree/uikit-plusa/blob/master/LICENSE)
 
-## Components
+## Components List
 
 ### Paragraph - 段落表示
 ### Sub Text - サブテキスト
@@ -21,3 +21,4 @@ UIkit3と合わせて取り込むことで、少し拡張(使用できるCOMPONE
 ### Margin Mini - 極小のマージン設定
 ### Message Box - メッセージ表示
 ### Movable Label Input - ラベルが動くインプットボックス
+### Infinite Scroll - 無限スクロール
