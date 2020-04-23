@@ -1,4 +1,4 @@
-/*! UIkit Plus α 1.0.2 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
+/*! UIkit Plus α 1.0.3 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
 
 document.addEventListener('DOMContentLoaded', () => {
     ukpReady();
@@ -27,18 +27,18 @@ function ukpReady() {
 
 class UkpInfiniteScroll {
     constructor(targetElt, loadingElt, onLoad) {
-        this.loadingElt = loadingElt;
+        this.loadingElt = document.getElementById(loadingElt);
         this.onLoad = onLoad;
         this.scTimerId = null;
         this.scCount = 0;
         this.isLoading = false;
         this.isFinish = false;
 
-        if (targetElt == document) {
+        if (targetElt == null) {
             this.targetEvt = document;
             this.targetElt = document.documentElement;
         } else {
-            this.targetEvt = this.targetElt = targetElt;
+            this.targetEvt = this.targetElt = document.getElementById(targetElt);
         }
 
         this._reload();
@@ -69,16 +69,23 @@ class UkpInfiniteScroll {
     }
 
     add(item) {
-        this.loadingElt.setAttribute('hidden', null);
         this.loadingElt.insertAdjacentHTML('beforebegin', item);
     }
 
     comp() {
-        this.isLoading = false;
+        if (this.targetElt.scrollHeight == this.targetElt.clientHeight) {
+            setTimeout(() => {
+                this.onLoad(this, this.scCount++);
+            }, 10);
+        } else {
+            this.isLoading = false;
+            this.loadingElt.setAttribute('hidden', null);
+        }
     }
 
     finish() {
         this.isLoading = false;
         this.isFinish = true;
+        this.loadingElt.setAttribute('hidden', null);
     }
 }

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Infinite Scroll</title>
+		<title>Infinite Scroll - 無限スクロール</title>
 		<link rel="shortcut icon" href="./favicon.ico">
 
 		<!-- uikit -->
@@ -25,38 +25,90 @@
 	</head>
 	<body>
 
-		<div id="scroll_area" class="uk-container uk-container-xsmall uk-margin-top">
-			<div id="loading" class="uk-width-1-1 uk-text-center uk-margin-top">
-				<span uk-spinner="ratio: 3"></span>
+		<div class="uk-container uk-container-small uk-margin-top">
+			<h2><span class="ukp-attsubtext">Infinite Scroll<p>無限スクロール</p></span></h2>
+		</div>
+
+		<div class="uk-container uk-container-small uk-margin-top">
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div id=&quot;scroll_area&quot; class=&quot;uk-container uk-container-small uk-margin-top&quot;&gt;
+	&lt;div class=&quot;uk-grid-small&quot; uk-grid&gt;
+		&lt;div id=&quot;loading&quot; class=&quot;uk-width-1-1 uk-text-center uk-margin-top&quot;&gt;
+			&lt;span uk-spinner=&quot;ratio: 3&quot;&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	const el_item = &#039;&lt;div class=&quot;uk-width-1-3&quot;&gt;&#039; +
+		&#039;&lt;div class=&quot;uk-card uk-card-primary uk-card-body uk-margin-bottom&quot;&gt;&#039; +
+		&#039;&lt;h3 class=&quot;uk-card-title&quot;&gt;Item{{count}}&lt;/h3&gt;&#039; +
+		&#039;&lt;p&gt;Try scrolling down.&lt;/p&gt;&#039; +
+		&#039;&lt;p&gt;下にスクロールしてみてください。&lt;/p&gt;&#039; +
+		&#039;&lt;/div&gt;&lt;/div&gt;&#039;;
+
+	document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+		let sc_count = 1;
+		let sc = new UkpInfiniteScroll(
+			null, &#039;loading&#039;,
+			(self, count) =&gt; {
+				console.log(&#039;loadItem&#039;, count);
+				// ここで通信などで表示アイテムを読み込む。
+				// setTimeout()の部分を通信などに置き換えてください。
+				setTimeout(() =&gt; {
+					for (i=0; i&lt;9; i++) {
+						// 表示アイテムの追加
+						self.add(el_item.replace(&#039;{{count}}&#039;, sc_count++));
+					}
+					if (sc_count &gt; 54) {
+						// スクロールによる読み込みを終了する場合
+						self.finish();
+					} else {
+						// スクロールによる読み込みを続行する場合
+						self.comp();
+					}
+				}, 1000)
+			});
+	});
+&lt;/script&gt;</code></pre>
+		</div>
+
+		<div id="scroll_area" class="uk-container uk-container-small uk-margin-top">
+			<div class="uk-grid-small" uk-grid>
+				<div id="loading" class="uk-width-1-1 uk-text-center uk-margin-top">
+					<span uk-spinner="ratio: 3"></span>
+				</div>
 			</div>
 		</div>
 
 		<br>
 
 		<script>
-			const el_item = '<div class="uk-card uk-card-primary uk-card-body uk-margin-bottom">' +
+			const el_item = '<div class="uk-width-1-3"><div class="uk-card uk-card-primary uk-card-body uk-margin-bottom">' +
 				'<h3 class="uk-card-title">Item{{count}}</h3>' +
 				'<p>Try scrolling down.</p>' +
 				'<p>下にスクロールしてみてください。</p>' +
-				'</div>';
+				'</div></div>';
 
 			document.addEventListener('DOMContentLoaded', () => {
 				let sc_count = 1;
 				let sc = new UkpInfiniteScroll(
-					document,
-					document.getElementById('loading'),
-					(obj, count) => {
+					null, 'loading',
+					(self, count) => {
 						console.log('loadItem', count);
 						// ここで通信などで表示アイテムを読み込む。
 						// setTimeout()の部分を通信などに置き換えてください。
 						setTimeout(() => {
-							for (i=0; i<5; i++) {
-								obj.add(el_item.replace('{{count}}', sc_count++));
+							for (i=0; i<9; i++) {
+								// 表示アイテムの追加
+								self.add(el_item.replace('{{count}}', sc_count++));
 							}
-							if (sc_count > 20) {
-								obj.finish();
+							if (sc_count > 54) {
+								// スクロールによる読み込みを終了する場合
+								self.finish();
 							} else {
-								obj.comp();
+								// スクロールによる読み込みを続行する場合
+								self.comp();
 							}
 						}, 1000)
 					});

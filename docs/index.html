@@ -549,25 +549,102 @@ xyz456
 				document.addEventListener('DOMContentLoaded', () => {
 					let sc_count = 1;
 					let sc = new UkpInfiniteScroll(
-						document.getElementById('scroll_area'),
-						document.getElementById('loading'),
-						(obj, count) => {
-							console.log('loadItem', count);
+						'scroll_area', // スクロール対象タグのidを指定する
+						'loading',     // 読み込み中に表示するタグのidを指定する
+						(self, count) => {
+							// self  : UkpInfiniteScrollクラス自身のオブジェクト(newしたものと同一)
+							// count : 読み込み回数(初回読み込みは0)
 							// ここで通信などで表示アイテムを読み込む。
 							// setTimeout()の部分を通信などに置き換えてください。
 							setTimeout(() => {
 								for (i=0; i<5; i++) {
-									obj.add(el_item.replace('{{count}}', sc_count++));
+									// 表示アイテムの追加
+									self.add(el_item.replace('{{count}}', sc_count++));
 								}
 								if (sc_count > 20) {
-									obj.finish();
+									// スクロールによる読み込みを終了する場合
+									self.finish();
 								} else {
-									obj.comp();
+									// スクロールによる読み込みを続行する場合
+									self.comp();
 								}
 							}, 1000)
 						});
 				});
 			</script>
+			<p>
+				スクロール用の領域と、読み込み中に表示するオブジェクトを用意して、<code>UkpInfiniteScroll</code>クラスをnewします。<br>
+				<code>UkpInfiniteScroll</code>のコンストラクタには下記を指定します。
+			</p>
+			<ul>
+				<li>第１引数：スクロール用の領域タグのid（ウィンドウ自体を対象とする場合は<code>null</code>を指定）</li>
+				<li>第２引数：読み込み中に表示するオブジェクトタグのid</li>
+				<li>第３引数：読み込み(スクロール最終到達)時に呼ばれる関数</li>
+			</ul>
+			<p>
+				使用するメソッドは下記になります。
+			</p>
+			<ul>
+				<li><code>add()</code><br>
+					これで表示アイテムを追加します。
+				</li>
+				<li><code>comp()</code><br>
+					表示アイテムの追加が完了したら呼び出します。(まだ読み込むデータがある場合)<br>
+					読み込み中の表示が消え、再度スクロールの最終到達を待つ状態になります。
+				</li>
+				<li><code>finish()</code><br>
+					読み込むデータがなくなった場合に呼び出します。(これ以上スクロールしない)
+				</li>
+			</ul>
+			<p>
+				上記サンプルのコードは下記。
+			</p>
+			<pre class="ukp-pre-title-dark"><span>CSS</span>
+<code>&lt;div id=&quot;scroll_area&quot; class=&quot;uk-container uk-container-xsmall uk-margin-top&quot; 
+style=&quot;height: 300px; overflow-y: scroll; border: solid 1px #ddd; padding: 1rem;&quot;&gt;
+	&lt;div id=&quot;loading&quot; class=&quot;uk-width-1-1 uk-text-center uk-margin-top&quot;&gt;
+		&lt;span uk-spinner=&quot;ratio: 3&quot;&gt;&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+	const el_item = &#039;&lt;div class=&quot;uk-card uk-card-primary uk-card-body uk-margin-bottom&quot;&gt;&#039; +
+		&#039;&lt;h3 class=&quot;uk-card-title&quot;&gt;Item{{count}}&lt;/h3&gt;&#039; +
+		&#039;&lt;p&gt;Try scrolling down.&lt;/p&gt;&#039; +
+		&#039;&lt;p&gt;下にスクロールしてみてください。&lt;/p&gt;&#039; +
+		&#039;&lt;/div&gt;&#039;;
+
+	document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+		let sc_count = 1;
+		let sc = new UkpInfiniteScroll(
+			&#039;scroll_area&#039;, // スクロール対象タグのidを指定する
+			&#039;loading&#039;,     // 読み込み中に表示するタグのidを指定する
+			(self, count) =&gt; {
+				console.log(&#039;loadItem&#039;, count);
+				// self  : UkpInfiniteScrollクラス自身のオブジェクト(newしたものと同一)
+				// count : 読み込み回数(初回読み込みは0)
+				// ここで通信などで表示アイテムを読み込む。
+				// setTimeout()の部分を通信などに置き換えてください。
+				setTimeout(() =&gt; {
+					for (i=0; i&lt;5; i++) {
+						// 表示アイテムの追加
+						self.add(el_item.replace(&#039;{{count}}&#039;, sc_count++));
+					}
+					if (sc_count &gt; 20) {
+						// スクロールによる読み込みを終了する場合
+						self.finish();
+					} else {
+						// スクロールによる読み込みを続行する場合
+						self.comp();
+					}
+				}, 1000)
+			});
+	});
+&lt;/script&gt;</code></pre>
+			<p>
+				ウィンドウ自体のスクロールに対応したサンプルは下記ボタンからどうぞ。<br>
+				別ウィンドウで開きます。<br>
+			</p>
+			<a class="uk-button uk-button-primary" href="./infinite_scroll.html" target="_blank">Infinite Scroll Sample</a>
 
 			<h2 id="history" class="ukp-paragraph@s uk-heading-line"><span class="ukp-attsubtext">History<p>履歴</p></span></h2>
 			<table class="uk-table uk-table-divider">
