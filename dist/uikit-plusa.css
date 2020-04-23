@@ -1,4 +1,4 @@
-/*! UIkit Plus α 1.0.2 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
+/*! UIkit Plus α 1.0.3 | https://playree.github.io/uikit-plusa/ | (c) 2020 Kazuki Minakawa (funlab, Inc.) | MIT License */
 
 .ukp-attsubtext,
 .ukp-attsubtext-end {
@@ -129,21 +129,22 @@
         width: 300px;
     }
     .ukp-sidefixnav[ukp-for-xsmall] {
+        width: 300px;
         margin-right: calc(((100% - 750px) / 2) - 320px);
     }
 }
 .ukp-sidefixnav[ukp-for-small] {
+    width: 200px;
     margin-right: calc(((100% - 900px) / 2) - 220px);
 }
 @media (min-width: 1600px) {
-    .ukp-sidefixnav {
-        width: 300px;
-    }
     .ukp-sidefixnav[ukp-for-small] {
+        width: 300px;
         margin-right: calc(((100% - 900px) / 2) - 320px);
     }
 }
 .ukp-sidefixnav[ukp-for-large] {
+    width: 200px;
     margin-right: calc(((100% - 1400px) / 2) - 220px);
 }
 .ukp-sidefixnav li.uk-active::before {
